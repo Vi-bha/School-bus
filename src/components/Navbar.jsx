@@ -32,8 +32,7 @@ function Navbar() {
           <Typography variant="h6" className={classes.title}>
             Welcome to Aaradhya School Bus Services
           </Typography>
-          <Button color="inherit">About Us</Button>
-          <Button color="inherit">Services</Button>
+          <Button color="inherit">Admin Login</Button>
           {/* Add more buttons/links as needed */}
         </Toolbar>
       </AppBar>
