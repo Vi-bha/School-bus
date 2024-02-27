@@ -1,6 +1,8 @@
+// Navbar.jsx
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    textAlign: "center", // Align title to the center horizontally
   },
   logo: {
     height: "50px", // Adjust height as needed for your logo
@@ -23,6 +26,11 @@ const useStyles = makeStyles((theme) => ({
 
 function Navbar() {
   const classes = useStyles();
+  const navigate = useNavigate(); // Using useNavigate hook to navigate
+
+  const handleAdminLogin = () => {
+    navigate("/auth"); // Navigate to the "/auth" route
+  };
 
   return (
     <div className={classes.root}>
@@ -32,7 +40,7 @@ function Navbar() {
           <Typography variant="h6" className={classes.title}>
             Welcome to Aaradhya School Bus Services
           </Typography>
-          <Button color="inherit">Admin Login</Button>
+          <Button color="inherit" onClick={handleAdminLogin}>Admin Login</Button>
           {/* Add more buttons/links as needed */}
         </Toolbar>
       </AppBar>

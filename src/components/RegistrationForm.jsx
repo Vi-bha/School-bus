@@ -84,7 +84,7 @@ function RegistrationForm() {
 
   return (
     <Container component="main" maxWidth="sm">
-       <Card variant="outlined">
+      <Card variant="outlined">
         <CardContent>
           <Typography
             component="h1"
@@ -107,7 +107,7 @@ function RegistrationForm() {
                   onChange={handleChange}
                 />
               </Grid>
-              <Grid item xs={12} sm={4}>
+               <Grid item xs={12} sm={4}>
                 <TextField
                   variant="outlined"
                   fullWidth
@@ -245,6 +245,7 @@ function RegistrationForm() {
                     />
                   }
                   label="I have read the note"
+                  style={{ justifyContent: "center", display: "flex" }}
                 />
               </Grid>
             </Grid>
@@ -283,3 +284,4 @@ function RegistrationForm() {
 }
 
 export default RegistrationForm;
+

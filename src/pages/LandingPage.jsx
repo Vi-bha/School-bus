@@ -1,3 +1,4 @@
+// LandingPage.jsx
 import React from "react";
 import RegistrationForm from "../components/RegistrationForm";
 import Navbar from "../components/Navbar";
@@ -19,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    alignItems: "center", // Align content to the center horizontally
     [theme.breakpoints.down("sm")]: {
       marginTop: theme.spacing(2),
     },
@@ -32,7 +34,7 @@ const LandingPage = () => {
   return (
     <>
       <Navbar />
-      <Grid container spacing={2} justify="center">
+      <Grid container spacing={2} justifyContent="center">
         <Grid item xs={12} sm={3}>
           {/* Image at the left side */}
           <img
