@@ -1,4 +1,3 @@
-// LandingPage.jsx
 import React from "react";
 import RegistrationForm from "../components/RegistrationForm";
 import Navbar from "../components/Navbar";
@@ -11,20 +10,27 @@ import {
   ListItemText,
   makeStyles,
 } from "@material-ui/core";
-import PhoneIcon from "@material-ui/icons/Phone"; // Import the Phone icon from Material-UI Icons
+import PhoneIcon from "@material-ui/icons/Phone";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(3),
     minHeight: "300px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center", // Align content to the center horizontally
+    alignItems: "center",
     [theme.breakpoints.down("sm")]: {
       marginTop: theme.spacing(2),
     },
-    width: "90%", // Adjusted width to make the Paper component wider
+  },
+  imageContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  image: {
+    maxWidth: "100%",
   },
 }));
 
@@ -34,31 +40,32 @@ const LandingPage = () => {
   return (
     <>
       <Navbar />
-      <Grid container spacing={2} justifyContent="center">
+      <Grid container spacing={3} justifyContent="center">
+        {/* Left Section */}
         <Grid item xs={12} sm={3}>
-          {/* Image at the left side */}
-          <img
-            src="src\assets\Bus.JPG"
-            alt="School Bus Left"
-            style={{ maxWidth: "100%" }}
-          />
-          {/* Contact details */}
+          <div className={classes.imageContainer}>
+            <img
+              src="src\assets\Bus.JPG"
+              alt="School Bus"
+              className={classes.image}
+            />
+          </div>
+          {/* Contact Details */}
           <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" gutterBottom>
               Contact Us
             </Typography>
             <Typography variant="body1" gutterBottom>
-              <PhoneIcon /> Phone number: 9766987118{" "}
-              {/* Add the Phone icon before the phone number */}
+              <PhoneIcon /> Phone number: 9766987118
             </Typography>
           </Paper>
         </Grid>
+        {/* Middle Section */}
         <Grid item xs={12} sm={6}>
-          {/* Registration form in the middle */}
           <RegistrationForm />
         </Grid>
+        {/* Right Section */}
         <Grid item xs={12} sm={3}>
-          {/* Notes at the right side */}
           <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" gutterBottom>
               Please Note:

@@ -107,7 +107,7 @@ function RegistrationForm() {
                   onChange={handleChange}
                 />
               </Grid>
-               <Grid item xs={12} sm={4}>
+              <Grid item xs={12} sm={4}>
                 <TextField
                   variant="outlined"
                   fullWidth
@@ -284,4 +284,3 @@ function RegistrationForm() {
 }
 
 export default RegistrationForm;
-
