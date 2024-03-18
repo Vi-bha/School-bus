@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import StudentDetails from './StudentDetails';
-
+import PaymentDetails from './PaymentDetails';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -102,6 +102,7 @@ const AdminPage = () => {
         </Typography>
         {/* Render respective details based on selectedOption */}
         Example: {selectedOption === 'student' && <StudentDetails />}
+        Example: {selectedOption === 'payment' && <PaymentDetails />}
       </main>
     </div>
   );
